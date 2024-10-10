@@ -1,0 +1,29 @@
+<?php
+
+class Vehicle{ 
+    public $name;
+    public $speed;
+    public $mileage;
+    public $fuel = "Diesel";
+
+    public function __construct($name, $speed, $mileage) {
+        $this->name = $name;
+        $this->speed = $speed;
+        $this->mileage = $mileage;
+
+   }
+}
+class Bus extends Vehicle{
+}
+class Car extends Vehicle{
+}
+$vehicle = new Vehicle ("Nebula Cruiser", 150, 25);
+$bus = new Bus ("City Voyager", 65, 10);
+$car = new Car ("Urban Phantom", 140, 28);
+
+
+echo "Vehicle fuel: ". $vehicle->fuel. "<br>";
+echo "Bus fuel: ". $bus->fuel. "<br>";
+echo "Car fuel: ". $car->fuel. "<br>";
+
+?>
